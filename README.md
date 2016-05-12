@@ -14,7 +14,7 @@ Seahub와 같은 Seafile 서버 웹 엔드는 Apache 라이선스에 따라 배�
 
 ## 설명서 정보
 
-이 설명서의 "소스 코드"는 github에서 제공합니다: https://github.com/haiwen/seafile-docs
+이 설명서의 "소스코드"는 github에서 제공합니다: https://github.com/haiwen/seafile-docs-ko
 
 ## 연락 정보
 
