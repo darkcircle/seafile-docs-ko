@@ -2882,6 +2882,7 @@ share_type이 'personal'이면 'user' 매개변수가 필요하며, share_type�
 이 API는 전체 활동 내역 레코드 중 첫 15개만 반환합니다. 더 많은 레코드를 가져오려면 `start` 매개변수 값을 전달하십시오
 
 * start (기본값 0)
+* size(사용자 아바타 크기, 기본값 36)
 
 **예제 요청**
 
@@ -2889,8 +2890,39 @@ share_type이 'personal'이면 'user' 매개변수가 필요하며, share_type�
 
 **예제 응답**
 
-
-     {"more_offset": 15, "events":[{"repo_id": "6f3d28a4-73ae-4d01-a727-26774379dcb9", "author": "mysnowls@163.com", "nick": "lins05", "time": 1398078909, "etype": "repo-update", "repo_name": "Downloads", "desc": "Added \"seafile-cli_3.0.2_i386.tar.gz\"."},{"repo_id": "6f3d28a4-73ae-4d01-a727-26774379dcb9", "author": "mysnowls@163.com", "nick": "lins05", "time": 1398075540, "etype": "repo-update", "repo_name": "Downloads", "desc": "Added \"seafile-server_3.0.0_x86-64.tar.gz\"."}], "more": false}
+```
+{'events': [{'author': u'lian@lian.com',
+             'avatar': '<img src="/media/avatars/default.png" width="36" height="36" class="avatar" />',
+             'avatar_url': 'https://cloud.seafile.com/media/avatars/default.png',
+             'date': '2016-05-06',
+             'etype': u'repo-delete',
+             'name': u'lian',
+             'nick': u'lian',
+             'repo_id': u'13e2ae06-8927-465b-8f57-319b3a7cfbdd',
+             'repo_name': u'2',
+             'time': 1462552942,
+             'time_relative': u'<time datetime="2016-05-06T16:42:22.967104" is="relative-time" title="Fri, 6 May 2016 16:42:22 +0800" >19 hours ago</time>'},
+            {'author': u'lian@lian.com',
+             'avatar': '<img src="/media/avatars/default.png" width="36" height="36" class="avatar" />',
+             'avatar_url': 'https://cloud.seafile.com/media/avatars/default.png',
+             'commit_id': u'1be92d40a1b526863bbf39e8abdae7d317a1195f',
+             'converted_cmmt_desc': u'Modified "<a href="/convert_cmmt_desc_link/?repo_id=47945b31-dedb-4b92-a048-32bf825595ce&cmmt_id=1be92d40a1b526863bbf39e8abdae7d317a1195f&nm=excel-view.xlsx" class="normal">excel-view.xlsx</a>"',
+             'date': '2016-04-25',
+             'desc': u'Modified "excel-view.xlsx"',
+             'etype': u'repo-update',
+             'more_files': False,
+             'name': u'lian',
+             'nick': u'lian',
+             'repo_encrypted': False,
+             'repo_id': u'47945b31-dedb-4b92-a048-32bf825595ce',
+             'repo_name': u'wopi',
+             'time': 1461569125,
+             'time_relative': u'<time datetime="2016-04-25T15:25:25" is="relative-time" title="Mon, 25 Apr 2016 15:25:25 +0800" >11 days ago</time>'}
+             ...
+             ],
+ 'more': True,
+ 'more_offset': 15}
+ ```
 
 **더 많은 활동 요청 예제**
 
@@ -2898,7 +2930,39 @@ share_type이 'personal'이면 'user' 매개변수가 필요하며, share_type�
 
 **더 많은 활동 응답 예제**
 
-     {"more_offset": 30, "events":[{"repo_id": "6f3d28a4-73ae-4d01-a727-26774379dcb9", "author": "mysnowls@163.com", "nick": "lins05", "time": 1398078909, "etype": "repo-update", "repo_name": "Downloads", "desc": "Added \"seafile-cli_3.0.2_i386.tar.gz\"."},{"repo_id": "6f3d28a4-73ae-4d01-a727-26774379dcb9", "author": "mysnowls@163.com", "nick": "lins05", "time": 1398075540, "etype": "repo-update", "repo_name": "Downloads", "desc": "Added \"seafile-server_3.0.0_x86-64.tar.gz\"."}], "more": false}
+```
+{'events': [{'author': u'lian@lian.com',
+             'avatar': '<img src="/media/avatars/default.png" width="36" height="36" class="avatar" />',
+             'avatar_url': 'https://cloud.seafile.com/media/avatars/default.png',
+             'date': '2016-05-06',
+             'etype': u'repo-delete',
+             'name': u'lian',
+             'nick': u'lian',
+             'repo_id': u'13e2ae06-8927-465b-8f57-319b3a7cfbdd',
+             'repo_name': u'2',
+             'time': 1462552942,
+             'time_relative': u'<time datetime="2016-05-06T16:42:22.967104" is="relative-time" title="Fri, 6 May 2016 16:42:22 +0800" >19 hours ago</time>'},
+            {'author': u'lian@lian.com',
+             'avatar': '<img src="/media/avatars/default.png" width="36" height="36" class="avatar" />',
+             'avatar_url': 'https://cloud.seafile.com/media/avatars/default.png',
+             'commit_id': u'1be92d40a1b526863bbf39e8abdae7d317a1195f',
+             'converted_cmmt_desc': u'Modified "<a href="/convert_cmmt_desc_link/?repo_id=47945b31-dedb-4b92-a048-32bf825595ce&cmmt_id=1be92d40a1b526863bbf39e8abdae7d317a1195f&nm=excel-view.xlsx" class="normal">excel-view.xlsx</a>"',
+             'date': '2016-04-25',
+             'desc': u'Modified "excel-view.xlsx"',
+             'etype': u'repo-update',
+             'more_files': False,
+             'name': u'lian',
+             'nick': u'lian',
+             'repo_encrypted': False,
+             'repo_id': u'47945b31-dedb-4b92-a048-32bf825595ce',
+             'repo_name': u'wopi',
+             'time': 1461569125,
+             'time_relative': u'<time datetime="2016-04-25T15:25:25" is="relative-time" title="Mon, 25 Apr 2016 15:25:25 +0800" >11 days ago</time>'}
+             ...
+             ],
+ 'more': True,
+ 'more_offset': 30}
+ ```
 
 ## <a id="get-thumbnail-image"></a>썸네일 그림 확인 ##
 
