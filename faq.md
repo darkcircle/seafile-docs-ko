@@ -102,5 +102,5 @@ AD는 그룹의 그룹 기능을 지원합니다. 다음 필터는 그룹의 구
 
     FILTER = (memberOf:1.2.840.113556.1.4.1941:=cn=group,cn=users,DC=x)
 
-필터 문법 정보는, http://msdn.microsoft.com/en-us/library/aa746475%28VS.85%29.aspx를 참고하십시오
+필터 문법 정보는, http://msdn.microsoft.com/en-us/library/aa746475%28VS.85%29.aspx 를 참고하십시오
 
